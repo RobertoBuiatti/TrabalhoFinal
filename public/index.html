@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Chat App</title>
+</head>
+<body>
+    <div id="chat-container">
+        <header>
+            <h1>Chat App</h1>
+        </header>
+        <div id="login-container">
+            <input id="login-username" placeholder="Digite seu nome" aria-label="Nome de usuário" />
+            <input type="color" id="login-color" aria-label="Escolha uma cor" />
+            <button id="login-button">Entrar</button>
+        </div>
+        <div class="main-content" style="display: none;">
+            <div id="user-list" class="sidebar">
+                <h2>Usuários</h2>
+                <div class="user" data-id="all">
+                    <span>Todos</span>
+                </div>
+            </div>
+            <div id="messages" class="message-area">
+            </div>
+        </div>
+        <div class="input-area" style="display: none;">
+            <input id="message" placeholder="Digite sua mensagem" aria-label="Mensagem" />
+            <button id="send">Enviar</button>
+            <input type="file" id="imageUpload" accept="image/*" aria-label="Enviar imagem" />
+        </div>
+    </div>
+    <audio id="notificationSound" src="notification.mp3" preload="auto"></audio>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

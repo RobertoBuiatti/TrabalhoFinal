@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 14px; /* Ajuste o valor conforme necessário */
+}
+
+#chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+#login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#login-container input,
+#login-container button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.sidebar {
+    background-color: #ddd;
+    padding: 10px;
+    width: 200px;
+    overflow-y: auto;
+}
+
+.message-area {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-area {
+    display: flex;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.input-area input,
+.input-area button {
+    margin-right: 10px;
+}
+
+.input-area input[type="file"] {
+    margin-right: 0;
+}
+
+.message {
+    max-width: 60%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    word-wrap: break-word;
+}
+
+.message.sent {
+    align-self: flex-end;
+    background-color: #dcf8c6;
+}
+
+.message.received {
+    align-self: flex-start;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.message.private {
+    background-color: #ffcccc;
+}
+
+.message span {
+    display: block;
+    font-size: 0.8em;
+    color: #555;
+}
+
+.message img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.user {
+    cursor: pointer;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user.selected {
+    background-color: #bbb;
+}
+
+.user.blocked {
+    background-color: #f8d7da;
+}
+
+.block-button,
+.unblock-button {
+    display: none;
+    margin-left: 10px;
+    padding: 5px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.user.selected .block-button,
+.user.selected .unblock-button {
+    display: inline-block;
+}
